@@ -39,7 +39,11 @@ class MainActivity : AppCompatActivity() {
                 userList.clear() // Clear the list before adding new data
                 for(postSnapshot in snapshot.children){
                     val user = postSnapshot.getValue(User::class.java)
-                    userList.add(user!!)
+
+                    if(user?.uid != mAuth.currentUser?.uid){
+                        userList.add(user!!)
+                    }
+
                 }
                 adapter.notifyDataSetChanged() // Notify the adapter for changes
             }
