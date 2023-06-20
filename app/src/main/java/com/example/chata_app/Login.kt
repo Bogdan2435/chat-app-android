@@ -40,19 +40,6 @@ class Login : AppCompatActivity() {
             val password = edtPassword.text.toString()
 
             login(email, password);
-
-//            if (email.isEmpty() || password.isEmpty()) {
-//                return@setOnClickListener
-//            }
-//
-//            mAuth.signInWithEmailAndPassword(email, password)
-//                .addOnCompleteListener { task ->
-//                    if (task.isSuccessful) {
-//                        val intent = Intent(this, MainActivity::class.java)
-//                        startActivity(intent)
-//                        finish()
-//                    }
-//                }
         }
 
     }
@@ -62,6 +49,7 @@ class Login : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val intent = Intent(this@Login, MainActivity::class.java)
+                    finish()
                     startActivity(intent)
                 } else {
                     Toast.makeText(this@Login, "User and password do not match.",
