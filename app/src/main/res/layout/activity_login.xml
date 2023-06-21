@@ -36,7 +36,8 @@
         android:paddingLeft="10dp"
         android:background="@drawable/edt_background"
         android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"/>
+        android:layout_marginRight="50dp"
+        android:inputType="textPassword"/>
     
     <Button
         android:id="@+id/btn_login"
