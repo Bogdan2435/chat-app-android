@@ -16,6 +16,7 @@ class SignUp : AppCompatActivity() {
     private lateinit var edtEmail: EditText
     private lateinit var edtPassword: EditText
     private lateinit var btnSignUp: Button
+    private lateinit var btnLogin: Button
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var mDbRef: DatabaseReference
@@ -32,6 +33,7 @@ class SignUp : AppCompatActivity() {
         edtEmail = findViewById(R.id.edt_email)
         edtPassword = findViewById(R.id.edt_password)
         btnSignUp = findViewById(R.id.btn_signup)
+        btnLogin = findViewById(R.id.txt_login_here)
 
         btnSignUp.setOnClickListener(){
 
@@ -40,6 +42,11 @@ class SignUp : AppCompatActivity() {
             val password = edtPassword.text.toString()
 
             signUp(name, email, password)
+        }
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
         }
     }
 
