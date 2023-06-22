@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">chata-app</string>
+    <string name="facebook_app_id">773146180953250</string>
+    <string name="fb_login_protocol_scheme">fb773146180953250</string>
 </resources>
